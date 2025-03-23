@@ -10,6 +10,7 @@ import (
 var DB *sql.DB
 
 func InitDB() {
+	//dsn := "host=host.docker.internal port=5433 user=postgres password=1234 dbname=postgres sslmode=disable"
 	dsn := "host=localhost port=5433 user=postgres password=1234 dbname=postgres sslmode=disable"
 	var err error
 	DB, err = sql.Open("postgres", dsn)
